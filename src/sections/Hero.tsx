@@ -115,10 +115,12 @@ export default function Hero() {
             </a>
 
             <a
-              href="/resume.pdf"
-              className="rounded-lg bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm ring-1 ring-slate-200 hover:bg-slate-50 dark:bg-slate-900 dark:text-white dark:ring-slate-700 dark:hover:bg-slate-800"
+             href="/resume2026.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white/70 px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm backdrop-blur hover:bg-white dark:border-slate-800 dark:bg-slate-900/40 dark:text-slate-50 dark:hover:bg-slate-900/70"
             >
-              Resume
+            Resume
             </a>
           </div>
         </div>

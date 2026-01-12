@@ -25,7 +25,7 @@ export default function About() {
           <div className="space-y-5 text-sm leading-relaxed text-slate-700 dark:text-slate-200">
             <p>
               I&apos;m a final-year CS student at Arizona State University, but
-              the thing that really describes me isn&apos;t my major—it&apos;s
+              the thing that really describes me isn&apos;t my major, it&apos;s
               that I can&apos;t leave broken systems alone.
             </p>
 
