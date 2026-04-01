@@ -2,6 +2,7 @@
 
 import type { ProjectDetails } from "./types";
 
+import { arbor } from "./projects/arbor";
 import { accountingAICompanion } from "./projects/accounting-ai-companion";
 import { asuInfoBot } from "./projects/asu-info-bot";
 import { asuLostFound } from "./projects/asu-lost-found";
@@ -11,6 +12,7 @@ import { smartCareerCoach } from "./projects/smart-career-coach";
 import { awsReco } from "./projects/aws-reco";
 
 export const projectDetailsById: Record<string, ProjectDetails> = {
+  [arbor.id]: arbor,
   [accountingAICompanion.id]: accountingAICompanion,
   [asuInfoBot.id]: asuInfoBot,
   [asuLostFound.id]: asuLostFound,

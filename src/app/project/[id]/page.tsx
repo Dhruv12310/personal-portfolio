@@ -67,30 +67,27 @@ export default async function ProjectPage({
           <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
             {card.tagline}
           </p>
-          {/* Repo link CTA (shows only if a repo link exists in details) */}
-{safeDetails.links?.some((l) => /repo/i.test(l.label)) ? (
-  <div className="mt-6 flex justify-center">
-    {safeDetails.links
-      .filter((l) => /repo/i.test(l.label))
-      .slice(0, 1)
-      .map((l) => (
-        <a
-          key={l.href}
-          href={l.href}
-          target="_blank"
-          rel="noreferrer"
-          className="group relative inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white/60 px-5 py-3 text-sm font-medium text-slate-800 backdrop-blur transition hover:-translate-y-[1px] hover:border-violet-300 dark:border-slate-800 dark:bg-slate-900/40 dark:text-slate-100 dark:hover:border-violet-500/50"
-        >
-          {/* glow */}
-          <span className="pointer-events-none absolute inset-0 -z-10 rounded-2xl opacity-0 blur-2xl transition group-hover:opacity-100 bg-violet-500/20 dark:bg-violet-400/20" />
-          <span className="pointer-events-none absolute inset-0 -z-10 rounded-2xl opacity-0 transition group-hover:opacity-100 shadow-[0_0_0_1px_rgba(139,92,246,0.25),0_0_36px_rgba(139,92,246,0.25)]" />
+          {/* Project links CTA (shows if any links exist in details) */}
+{safeDetails.links?.length ? (
+  <div className="mt-6 flex flex-wrap justify-center gap-3">
+    {safeDetails.links.map((l) => (
+      <a
+        key={l.href}
+        href={l.href}
+        target="_blank"
+        rel="noreferrer"
+        className="group relative inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white/60 px-5 py-3 text-sm font-medium text-slate-800 backdrop-blur transition hover:-translate-y-[1px] hover:border-violet-300 dark:border-slate-800 dark:bg-slate-900/40 dark:text-slate-100 dark:hover:border-violet-500/50"
+      >
+        {/* glow */}
+        <span className="pointer-events-none absolute inset-0 -z-10 rounded-2xl opacity-0 blur-2xl transition group-hover:opacity-100 bg-violet-500/20 dark:bg-violet-400/20" />
+        <span className="pointer-events-none absolute inset-0 -z-10 rounded-2xl opacity-0 transition group-hover:opacity-100 shadow-[0_0_0_1px_rgba(139,92,246,0.25),0_0_36px_rgba(139,92,246,0.25)]" />
 
-          Project Repo Link
-          <span className="text-slate-500 transition group-hover:text-violet-600 dark:text-slate-400 dark:group-hover:text-violet-300">
-            ↗
-          </span>
-        </a>
-      ))}
+        {l.label}
+        <span className="text-slate-500 transition group-hover:text-violet-600 dark:text-slate-400 dark:group-hover:text-violet-300">
+          ↗
+        </span>
+      </a>
+    ))}
   </div>
 ) : null}
 

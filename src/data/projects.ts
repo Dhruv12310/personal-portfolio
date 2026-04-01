@@ -16,6 +16,20 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    id: "arbor",
+    name: "Arbor",
+    badge: "ML Research",
+    tagline: "Vectorless RAG with fine-tuned document navigation models.",
+    description:
+      "Open-source document intelligence system that replaces vector search with LLM-driven hierarchical tree navigation — two fine-tuned models (Qwen2.5 3B + 7B), F1 = 0.851, runs fully locally at near-zero cost.",
+    tech: ["Python", "Qwen2.5", "QLoRA", "Unsloth", "Gemini API", "Ollama", "HuggingFace"],
+    impacts: [
+      { label: "F1 Score", value: "0.851" },
+      { label: "Exact Match", value: "80.9%" },
+      { label: "Improvement", value: "3.7× over baseline" },
+    ],
+  },
     {
     id: "accounting-ai-companion",
     name: "Accounting AI Companion",
